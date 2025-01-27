@@ -42,7 +42,7 @@ st.markdown(
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-        color: red;  # You may change text color as needed for better visibility
+        color: black;  # You may change text color as needed for better visibility
     }
     </style>
     """, 
@@ -70,10 +70,10 @@ if check_out <= check_in:
 else:
     # Collect guest details
     st.header("Guest Details")
-    guest_name = st.text_input("Full Name")
-    guest_email = st.text_input("Email Address")
-    guest_phone = st.text_input("Phone Number")
-    number_of_guests = st.number_input("Number of Guests", min_value=1, step=1)
+    guest_name = st.text_input(f"Full Name")
+    guest_email = st.text_input(f"Email Address")
+    guest_phone = st.text_input(f"Phone Number")
+    number_of_guests = st.number_input(f"Number of Guests", min_value=1, step=1)
 
     # Generate Estimate
     if st.button("Generate Estimate"):
